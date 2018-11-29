@@ -1,24 +1,14 @@
 # TextToVoice
 
 #### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
+    1、使用android TTS 生成可以播放的文件 和 播放功能；该项目中未检测手机是否自带支持中文的TTS软件；
+    2、Android系统从1.6版本开始就支持TTS（Text-To-Speech）,即语音合成。但是android系统默认的TTS引擎:Pic TTS不支持中文。所以我们得安装自己的TTS引擎和语音包（推荐讯飞TTS）
 
 #### 使用说明
 
 ~~~
-btn_textToVoice.setOnClickListener(new View.OnClickListener() {
+        //生成可以播放的文件
+        btn_textToVoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //String url = SDCardUtils.getDiskFileDir(MainActivity.this).getAbsolutePath() + "/" + Cn2Spell.getPinYin(text.getText().toString()) + ".wav";
@@ -27,6 +17,7 @@ btn_textToVoice.setOnClickListener(new View.OnClickListener() {
                 createVoiceFile(text.getText().toString(), url);
             }
         });
+        //播放文件
         btn_speakText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
